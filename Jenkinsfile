@@ -15,6 +15,10 @@ pipeline {
             steps {
                 echo "its a deploy stage"
             }
+        stage('email build') { 
+            steps {
+                mail bcc: '', body: 'from jenkins', cc: '', from: '', replyTo: '', subject: 'sample', to: 'bikram6singha@gmail.com'
+            } 
         }
     }
 }
