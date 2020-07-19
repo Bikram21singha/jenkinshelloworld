@@ -15,11 +15,13 @@ pipeline {
             steps {
                 echo "its a deploy stage"
             }
+        }
         stage('input') { 
             steps {
                 input("want to continue")
                 echo "its a continue stage"
-            }            
+            } 
+        }
         stage('email build') { 
             steps {
                 mail bcc: '', body: 'from jenkins', cc: '', from: '', replyTo: '', subject: 'sample', to: 'bikram6singha@gmail.com'
